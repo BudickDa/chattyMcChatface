@@ -36,12 +36,6 @@ Meteor.methods({
         }));
     },
     'callAmazon'(thing){
-        opHelper.execute('ItemSearch', {
-            'Keywords': thing
-        }).then(res => {
-            console.log("Results object: ", res.result);
-        }).catch(err => {
-            console.error
-        });
+        createMessage(`Buy ${thing} on amazon! <button>Buy</button>`, true);
     }
 });
