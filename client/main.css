@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.background{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: #1e5799; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgb(255,64,129) 0%, #7A1E3D 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgb(255,64,129) 0%,#7A1E3D 100%);
+    background: radial-gradient(ellipse at center, rgb(255,64,129) 0%,#7A1E3D 100%);
+    overflow: hidden;
+}
+
+.chat{
+    overflow: hidden;
+    height: calc(100vh - 120px);
+    width: 100vw;
+}
+.chat  .chat--messages{
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    animation: transform 1s ease-in-out;
+}
+.chat .chat--input{
+    position: fixed;
+    bottom: 0;
+    left: 50vw;
+    width: 420px;
+    height: auto;
+    min-height: 0;
+    transform: translate(-210px, 0);
+}
+
+.chat  .message{
+    width: 45%;
+    transform: translate(55vw, 0);
+    height: auto;
+    min-height: 120px;
+    padding: 15px;
+}
+.chat  .message.bot{
+    transform: translate(0,0);
+}

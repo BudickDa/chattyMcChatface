@@ -1,0 +1,55 @@
+<head>
+    <title>Chatty McChatface</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-pink.min.css">
+</head>
+
+<body>
+<div class="background">
+    {{>chat}}
+</div>
+</body>
+
+<template name="chat">
+    <div class="chat">
+        <div class="chat--messages" style="transform: translate(0, -{{offset}}px)">
+            {{#each messages}}
+                {{>message}}
+            {{/each}}
+        </div>
+        <div class="chat--input mdl-card mdl-shadow--2dp">
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <textarea class="js-text mdl-textfield__input" type="text" rows="3" id="sample5"></textarea>
+                    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+                </div>
+                <button type="submit"
+                        class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                    <i class="material-icons">send</i>
+                </button>
+            </form>
+
+        </div>
+    </div>
+</template>
+
+<template name="message">
+    <div class="message mdl-card mdl-shadow--2dp {{botClass}}">
+        {{#if avatar}}
+            <div class="message--avatar">
+                <img src="">
+            </div>
+            <div class="message--text">
+                {{text}}
+            </div>
+        {{else}}
+            <div class="message--text">
+                {{text}}
+            </div>
+        {{/if}}
+        <div class="message--time">
+            {{time}}
+        </div>
+    </div>
+</template>
