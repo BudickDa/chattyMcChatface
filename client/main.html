@@ -13,7 +13,7 @@
 
 <template name="chat">
     <div class="chat">
-        <div class="chat--messages" style="transform: translate(0, -{{offset}}px)">
+        <div class="chat--messages" style="transform: translate(0, {{offset}}px)">
             {{#each messages}}
                 {{>message}}
             {{/each}}
@@ -21,7 +21,7 @@
         <div class="chat--input mdl-card mdl-shadow--2dp">
             <form action="#">
                 <div class="mdl-textfield mdl-js-textfield">
-                    <textarea class="js-text mdl-textfield__input" type="text" rows="3" id="sample5"></textarea>
+                    <textarea required="required" class="js-text mdl-textfield__input" type="text" rows="3" id="sample5"></textarea>
                     <label class="mdl-textfield__label" for="sample5">Text lines...</label>
                 </div>
                 <button type="submit"

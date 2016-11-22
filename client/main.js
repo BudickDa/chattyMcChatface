@@ -8,7 +8,7 @@ const offsetValue = new ReactiveVar(0);
 
 Template.chat.helpers({
     messages() {
-        return Messages.find().map(doc => {
+        return Messages.find({}, {sort: {datetime: -1}}).map(doc => {
             if (doc.bot) {
                 doc.avatar = 'asdf.jpg';
                 doc.botClass = 'bot';
