@@ -12,3 +12,5 @@ Set keys for api as environment variables:
   }
   
   cd into dir and start by typing `meteor`
+  
+  Or look on https://tentacula.me
