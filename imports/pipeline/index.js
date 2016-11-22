@@ -74,14 +74,14 @@ const checkState = function() {
     if (state.todos.length > 0) {
         const todo = _.last(state.todos);
         if (todo.do === 'buy') {
-            //Meteor.call('callAmazon', todo.what);
+            Meteor.call('callAmazon', todo.what);
             state.todos.push({'do': 'insure', 'what': todo.what});
         }
         if (todo.do === 'watch') {
             Meteor.call('callYoutube', todo.what);
         }
         if (todo.do === 'insure') {
-            createMessage(`Do you want to buy insurance for ${todo.what}? <button>YES</button>`)
+            createMessage(`Do you want to buy insurance for ${todo.what}? <button>YES</button>`, true);
         }
     }
     state.todos.shift();
