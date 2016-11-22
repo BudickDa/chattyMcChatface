@@ -28,7 +28,7 @@ body{
     top: 0;
     left: 0;
     width: 100vw;
-    animation: transform 1s ease-in-out;
+    animation: transform .4s;
 }
 .chat .chat--input{
     position: fixed;

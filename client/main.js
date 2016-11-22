@@ -30,7 +30,7 @@ Template.chat.events({
         Meteor.call('chat', text, () => {
             Meteor.setTimeout(() => {
                 offset(instance);
-            }, 500);
+            }, 100);
         });
         instance.$('.js-text').val('')
     },

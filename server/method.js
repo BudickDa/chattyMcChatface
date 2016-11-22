@@ -1,20 +1,16 @@
 import {Meteor} from 'meteor/meteor';
-import Messages from '/imports/messages';
-import pipeline from '/imports/pipeline'
-
-const createMessages = function (text, bot) {
-    return {
-        datetime: new Date(),
-        text: text,
-        bot: bot,
-        userId: 'This makes the bot skaleable, because every user has its own conversation.'
-    };
-};
+import {pipeline, state} from '/imports/pipeline'
+import createMessage from '/imports/pipeline/create-message';
 
 Meteor.methods({
     chat(text){
-        Messages.insert(createMessages(text, false));
-        const answer = pipeline(text);
-        Messages.insert(createMessages(answer, true));
+        createMessage(text, false);
+        this.unblock();
+        pipeline(text).then(answer => {
+            createMessage(answer, true);
+        }).catch(err => {
+            createMessage(`Something went wrong: ${err.message}`, true);
+        });
+        return state;
     }
-})
+});
