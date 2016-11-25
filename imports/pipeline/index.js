@@ -66,6 +66,8 @@ async function pipeline(question) {
     if (entities.length > 0) {
         const entity = entities[0];
         return `${response} I found ${entity.name} on <a href="${entity.metadata.wikipedia_url}" target="_blank">Wikipedia</a>.`;
+    }else{
+        return 'I am sorry Jon, I can\'t do this.';
     }
     return response;
 }

@@ -127,6 +127,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.13/web.browser/pre.js" />
         <item url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.13/web.browser/post.js" />
         <item url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.13/web.browser/fastclick.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/force-ssl/1.0.13/web.browser/force_ssl_common.js" />
         <item url="file://$USER_HOME$/.meteor/packages/modules-runtime/0.7.7/web.browser/modules-runtime.js" />
         <item url="file://$USER_HOME$/.meteor/packages/modules-runtime/0.7.7/web.browser/.npm/package/node_modules/install/install.js" />
         <item url="file://$USER_HOME$/.meteor/packages/allow-deny/1.0.5/web.browser/allow-deny.js" />
@@ -262,6 +263,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.13/web.browser/pre.js" />
       <root url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.13/web.browser/post.js" />
       <root url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.13/web.browser/fastclick.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/force-ssl/1.0.13/web.browser/force_ssl_common.js" />
       <root url="file://$USER_HOME$/.meteor/packages/modules-runtime/0.7.7/web.browser/modules-runtime.js" />
       <root url="file://$USER_HOME$/.meteor/packages/modules-runtime/0.7.7/web.browser/.npm/package/node_modules/install/install.js" />
       <root url="file://$USER_HOME$/.meteor/packages/allow-deny/1.0.5/web.browser/allow-deny.js" />
